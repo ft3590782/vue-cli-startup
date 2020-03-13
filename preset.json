@@ -2,13 +2,14 @@
   "useConfigFiles": true,
   "plugins": {
     "@vue/cli-plugin-babel": {},
-    "axios":{}
+    "postcss-plugin-px2rem": {},
+    "px2rem-loader": {}
   },
   "router": true,
   "routerHistoryMode": false,
   "vuex": true,
   "cssPreprocessor": "dart-sass",
-  "configs":{
+  "configs": {
 
   }
 }

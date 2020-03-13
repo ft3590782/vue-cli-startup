@@ -1,0 +1,144 @@
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+body,
+html {
+  // width: 100%;
+  height: 100%;
+  touch-action: manipulation;
+}
+body,
+html,
+div,
+p,
+span,
+input,
+button,
+ul,
+li {
+  box-sizing: border-box;
+}
+body,
+html,
+div,
+p,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+*:not(input,textarea) {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.input,.input-text,input,textarea{
+  -webkit-touch-callout:inherit;
+  user-select: text
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-parent {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &.top {
+    align-items: flex-start;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.end {
+    justify-content: flex-end;
+  }
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.col-1 {
+  flex: 1 1 25%;
+}
+
+.col-2 {
+  flex: 1 1 50%;
+}
+
+.col-3 {
+  flex: 1 1 75%;
+}
+
+.col-4 {
+  flex: 1 1 100%;
+}
+
+.m-r-10 {
+  margin-right: 10px;
+}
+
+.m-r-20 {
+  margin-right: 20px;
+}
+
+.m-l-20 {
+  margin-left: 20px;
+}
+
+.m-l-40 {
+  margin-left: 40px;
+}
+
+.m-l-60 {
+  margin-left: 60px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
+}
+
+.m-t-40 {
+  margin-top: 40px;
+}
+
+.m-b-40 {
+  margin-bottom: 40px;
+}
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity:0;
+}

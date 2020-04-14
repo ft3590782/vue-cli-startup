@@ -42,14 +42,27 @@ li {
   padding: 0;
   margin: 0;
 }
-*:not(input,textarea) {
-  -webkit-touch-callout: none;
+*:not(input, textarea) {
+  -webkit-touch-callout: none; /*系统默认菜单被禁用*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -khtml-user-select: none; /*早期浏览器*/
+  -moz-user-select: none; /*火狐*/
+  -ms-user-select: none; /*IE10*/
   user-select: none;
 }
 
-.input,.input-text,input,textarea{
-  -webkit-touch-callout:inherit;
-  user-select: text
+.input,
+.input-text,
+input,
+textarea {
+  -webkit-touch-callout: inherit;
+  -webkit-user-select: text; /*webkit浏览器*/
+  -khtml-user-select: text; /*早期浏览器*/
+  -moz-user-select: text; /*火狐*/
+  user-select: text;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
 }
 .container {
   width: 100%;
@@ -135,10 +148,22 @@ li {
   margin-bottom: 40px;
 }
 
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity:0;
+  opacity: 0;
+}
+
+.btn {
+  -webkit-touch-callout: none; /*系统默认菜单被禁用*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -khtml-user-select: none; /*早期浏览器*/
+  -moz-user-select: none; /*火狐*/
+  -ms-user-select: none; /*IE10*/
+  user-select: none;
+  &:active {
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
 }

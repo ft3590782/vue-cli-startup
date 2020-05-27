@@ -114,6 +114,33 @@ textarea {
   flex: 1 1 100%;
 }
 
+@for $i from 1 through 12 {
+  .m-l-#{$i*5} {
+    margin-left: 1px * $i * 5;
+  }
+  .m-r-#{$i*5} {
+    margin-right: 1px * $i * 5;
+  }
+  .m-t-#{$i*5} {
+    margin-top: 1px * $i * 5;
+  }
+  .m-b-#{$i*5} {
+    margin-bottom: 1px * $i * 5;
+  }
+  .p-l-#{$i*5} {
+    padding-left: 1px * $i * 5;
+  }
+  .p-r-#{$i*5} {
+    padding-right: 1px * $i * 5;
+  }
+  .p-t-#{$i*5} {
+    padding-top: 1px * $i * 5;
+  }
+  .p-b-#{$i*5} {
+    padding-bottom: 1px * $i * 5;
+  }
+}
+
 .m-r-10 {
   margin-right: 10px;
 }
@@ -168,4 +195,35 @@ textarea {
   &:active {
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
+}
+
+.btn {
+  -webkit-touch-callout: none; /*系统默认菜单被禁用*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -khtml-user-select: none; /*早期浏览器*/
+  -moz-user-select: none; /*火狐*/
+  -ms-user-select: none; /*IE10*/
+  user-select: none;
+  &:active {
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.ndclick {
+  cursor: pointer;
+  -webkit-touch-callout: none; /*系统默认菜单被禁用*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -khtml-user-select: none; /*早期浏览器*/
+  -moz-user-select: none; /*火狐*/
+  -ms-user-select: none; /*IE10*/
+  user-select: none;
 }

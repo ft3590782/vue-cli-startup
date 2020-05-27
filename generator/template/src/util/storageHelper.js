@@ -1,19 +1,19 @@
-const storageKey = "myStorageKey";
+const storageKey = 'storageKey2020'
 
 export default {
-  get(keyName) {
+  get (keyName, storageType = 'localStorage') {
     let result =
-      window.localStorage.getItem(`${storageKey}__${keyName}`) || null;
+      window[storageType].getItem(`${storageKey}__${keyName}`) || null
     if (result) {
-      return JSON.parse(result);
+      return JSON.parse(result)
     } else {
-      return null;
+      return null
     }
   },
-  set(keyName, data) {
-    window.localStorage.setItem(
+  set (keyName, data, storageType = 'localStorage') {
+    window[storageType].setItem(
       `${storageKey}__${keyName}`,
       JSON.stringify(data)
-    );
+    )
   }
-};
+}

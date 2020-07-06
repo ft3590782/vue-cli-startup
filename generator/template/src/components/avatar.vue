@@ -10,9 +10,10 @@
       alt
       srcset
     />
-    <span class="avatar-name" v-else>
+    <span class="avatar-name" v-else-if="name && name !== ''">
       {{ name.length > 2 ? name.substring(name.length - 2) : name }}
     </span>
+    <span class="avatar-name" v-else></span>
   </div>
 </template>
 <script>
@@ -20,28 +21,28 @@ export default {
   props: {
     size: {
       type: Number,
-      default: 72
+      default: 72,
     },
     fontsize: {
       type: Number,
-      default: 26
+      default: 26,
     },
     name: {
       type: String,
-      required: true
+      default: "",
     },
     avatar: {
-      type: String
-    }
+      type: String,
+    },
   },
   computed: {
-    vwSize: function() {
+    vwSize: function () {
       return this.size / 7.5;
     },
-    vwFontSize: function() {
-     return this.fontsize / 7.5;
-    }
-  }
+    vwFontSize: function () {
+      return this.fontsize / 7.5;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -59,6 +60,7 @@ export default {
     width: 100%;
     height: 100%;
     border-radius: 1000px;
+    background-color: #eee;
   }
   .avatar-name {
     width: 100%;

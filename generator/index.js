@@ -18,7 +18,6 @@ module.exports = (api, options, rootOptions) => {
       'lodash': '^4.17.15',
       'fastclick': '^1.0.6',
       'lib-flexible': '^0.3.2',
-
     }
   })
 

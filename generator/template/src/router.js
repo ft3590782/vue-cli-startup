@@ -9,13 +9,19 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: index
+      component: index,
+      meta: {
+        index: 1
+      }
     },
     {
       path: '/detail/:id',
       name: 'detail',
       component: () =>
-        import(/* webpackChunkName: "detail" */ './views/detail.vue')
+        import(/* webpackChunkName: "detail" */ './views/detail.vue'),
+      meta: {
+        index: 2
+      }
     }
   ]
 })

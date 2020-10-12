@@ -2,7 +2,7 @@
 
 // 独立class使用方式:
 // 1.@import "@/scss/border1px.scss"; //引入文件
-// 2.@include borderCreator("border-btn", "", dashed, #979797); //这会创建一个名字为`border-btn`的class
+// 2.@include borderCreator(border-btn, "", dashed, #979797); //这会创建一个名字为`border-btn`的class
 // 参考:https://blog.csdn.net/qq_31061615/article/details/99860369
 @mixin borderCreator($name, $direction, $type, $color) {
   .#{$name} {
@@ -37,7 +37,7 @@
 // 1.@import "@/scss/border1px.scss"; //引入文件
 /*
  .content{
-    @include  borderInsideCreator("top","solid","#000")
+    @include  borderInsideCreator(top,solid,#000)
     color:red;
   }
   将被渲染为
